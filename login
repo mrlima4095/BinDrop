@@ -29,6 +29,12 @@
         #acoes { display: flex; align-items: center; gap: 5px; flex-wrap: nowrap; }
         #acoes img { width: 32px; height: 32px; object-fit: cover; cursor: pointer; }
         #acoes button { flex: 1; white-space: nowrap; }
+
+
+        input[type="user"], input[type="password"] { padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
+
+        button { padding: 10px; border: none; border-radius: 5px; background-color: #3498db; color: white; cursor: pointer; transition: background-color 0.2s ease; }
+        button:hover { background-color: #2980b9; }
     </style>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

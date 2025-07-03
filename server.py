@@ -38,8 +38,6 @@ UPLOAD_FOLDER = os.path.join(os.path.dirname(__file__), 'uploads')
 JWT_SECRET = json.load(open("server.json", "r"))['JWT_SECRET']
 JWT_ALGORITHM = 'HS256'
 JWT_EXP_DELTA_SECONDS = 604800
-# | (Fernet Settings)
-fernet = Fernet(json.load(open("server.json", "r"))['FERNET_KEY'].encode())
 # |
 # SQLite3  
 # | (Open Connection)
@@ -104,7 +102,7 @@ def login():
         token = gen_token(username)
         response = make_response(jsonify({"response": "Login successful"}), 200)
         response.set_cookie('token', token, httponly=True, secure=True, samesite='Lax', max_age=60*60*24*7)
-        
+
         return response
     else: return jsonify({"response": "Bad credentials"}), 401
 # | (Register)
@@ -139,6 +137,14 @@ def signup():
         max_age=60*60*24*7
     )
     return response
+# | 
+# Status
+@app.route('/api/status', methods=['GET'])
+def status():
+    username = get_user(request.cookies.get('token'))
+    if not username: return jsonify({ "response": "Bad credentials!" }), 401
+
+    return jsonify({ "response": username }), 200
 # |
 # |
 # BinDrop

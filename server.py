@@ -81,7 +81,7 @@ def get_user(token):
 
         return username
     except (ExpiredSignatureError, InvalidTokenError): return None
-# |
+# | 
 # |
 # PlainPost
 # |

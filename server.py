@@ -51,9 +51,8 @@ def getdb():
 # |
 def gen_token(username):
     mailserver, mailcursor = getdb()
-    mailcursor.execute("SELECT credentials_update FROM users WHERE username = ?", (username,))
+    mailcursor.execute("SELECT 1 FROM users WHERE username = ?", (username,))
     row = mailcursor.fetchone()
-    credentials_update = row['credentials_update'] if row else None
 
     payload = {
         'username': username,

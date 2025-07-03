@@ -68,16 +68,12 @@ def get_user(token):
     try:
         payload = jwt.decode(token, JWT_SECRET, algorithms=[JWT_ALGORITHM])
         username = payload['username']
-        token_pass_time = payload.get('credentials_update')
 
         mailserver, mailcursor = getdb()
-        mailcursor.execute("SELECT credentials_update FROM users WHERE username = ?", (username,))
+        mailcursor.execute("SELECT 1 FROM users WHERE username = ?", (username,))
         row = mailcursor.fetchone()
 
         if row is None: return None
-
-        db_pass_time = row['credentials_update']
-        if token_pass_time != db_pass_time: return None 
 
         return username
     except (ExpiredSignatureError, InvalidTokenError): return None

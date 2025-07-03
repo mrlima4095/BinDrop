@@ -93,12 +93,9 @@ tr:nth-child(even) {
     background-color: #f9f9f9;
 }
 
-.acoes button {
-    margin: 0 2px;
-    width: auto;
-    padding: 5px 10px;
-    font-size: 0.85em;
-}
+#acoes { display: flex; align-items: center; gap: 5px; flex-wrap: nowrap; }
+#acoes img { width: 32px; height: 32px; object-fit: cover; cursor: pointer; }
+#acoes button { flex: 1; white-space: nowrap; }
 
 #arquivoTabela {
     table-layout: fixed;

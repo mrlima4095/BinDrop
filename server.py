@@ -56,7 +56,6 @@ def gen_token(username):
 
     payload = {
         'username': username,
-        'credentials_update': credentials_update,
         'exp': datetime.utcnow() + timedelta(seconds=JWT_EXP_DELTA_SECONDS)
     }
     token = jwt.encode(payload, JWT_SECRET, algorithm=JWT_ALGORITHM)

@@ -1,5 +1,18 @@
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
-body { background-color: #f0f2f5; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 20px; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
 
 #container {
     background-color: white;
@@ -9,12 +22,17 @@ body { background-color: #f0f2f5; min-height: 100vh; display: flex; align-items:
     width: 90%;
     max-width: 800px;
 }
-
 #acoes { display: flex; align-items: center; gap: 5px; flex-wrap: nowrap; }
 #acoes img { width: 32px; height: 32px; object-fit: cover; cursor: pointer; }
 #acoes button { flex: 1; white-space: nowrap; }
 
-#tabelaContainer { max-height: 150px; overflow-y: auto; overflow-x: auto; border: 1px solid #ccc; border-radius: 5px; }
+#tabelaContainer {
+    max-height: 150px;
+    overflow-y: auto;
+    overflow-x: auto; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
 
 
 h1, h2 {
@@ -49,28 +67,92 @@ button {
     width: 100%;
 }
 
-button:hover { background-color: #2980b9; }
+button:hover {
+    background-color: #2980b9;
+}
 
-table { width: 100%; margin-top: 20px; border-collapse: collapse; font-size: 0.9em; }
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    font-size: 0.9em;
+}
 
-th, td { padding: 10px; border: 1px solid #ccc; text-align: center; }
-th { background-color: #f8f8f8; color: #333; }
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
 
-tr:nth-child(even) { background-color: #f9f9f9; }
+th {
+    background-color: #f8f8f8;
+    color: #333;
+}
 
-#acoes { display: flex; align-items: center; gap: 5px; flex-wrap: nowrap; }
-#acoes img { width: 32px; height: 32px; object-fit: cover; cursor: pointer; }
-#acoes button { flex: 1; white-space: nowrap; }
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
 
-#arquivoTabela { table-layout: fixed; word-wrap: break-word; border-collapse: collapse; width: 100%; max-height: 400px; overflow-y: auto; border: 1px solid #ccc; border-radius: 5px; }
-#arquivoTabela td, #arquivoTabela th { word-break: break-word; }
-#arquivoTabela td:first-child { max-width: 150px; }
-#arquivoTabela thead, #arquivoTabela tbody { display: block; }
-#arquivoTabela thead tr { display: table; width: 100%; table-layout: fixed; background-color: #f8f8f8; }
-#arquivoTabela tbody { height: 350px; overflow-y: auto; overflow-x: hidden; display: block; width: 100%; }
-#arquivoTabela tbody tr { display: table; width: 100%; table-layout: fixed; }
-#arquivoTabela th, #arquivoTabela td { padding: 10px; border: 1px solid #ccc; text-align: center; word-break: break-word; }
-#arquivoTabela td:first-child, #arquivoTabela th:first-child { max-width: 150px; }
+.acoes button {
+    margin: 0 2px;
+    width: auto;
+    padding: 5px 10px;
+    font-size: 0.85em;
+}
+
+#arquivoTabela {
+    table-layout: fixed;
+    word-wrap: break-word;
+    border-collapse: collapse;
+    width: 100%;
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+#arquivoTabela td, #arquivoTabela th {
+    word-break: break-word;
+}
+
+#arquivoTabela td:first-child {
+    max-width: 150px;
+}
+
+#arquivoTabela thead, #arquivoTabela tbody {
+    display: block;
+}
+
+#arquivoTabela thead tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    background-color: #f8f8f8;
+}
+
+#arquivoTabela tbody {
+    height: 350px; 
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: block;
+    width: 100%;
+}
+
+#arquivoTabela tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+#arquivoTabela th, #arquivoTabela td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+    word-break: break-word;
+}
+
+#arquivoTabela td:first-child, #arquivoTabela th:first-child {
+    max-width: 150px;
+}
 
 
 @media (max-width: 600px) { #conteiner { overflow-x: auto; } }

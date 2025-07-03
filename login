@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>BinDrop - Login</title>
 
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
         body { background-color: #f0f2f5; min-height: 100vh; display: flex; align-items: center; justify-content: center; flex-direction: column; overflow-x: hidden; }
@@ -29,7 +30,6 @@
         #acoes img { width: 32px; height: 32px; object-fit: cover; cursor: pointer; }
         #acoes button { flex: 1; white-space: nowrap; }
     </style>
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="scripts/login.js" defer></script>
